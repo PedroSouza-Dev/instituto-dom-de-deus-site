@@ -1,0 +1,274 @@
+:root {
+    ---ddd-main-blue: #0E0B86;
+    ---ddd-white: #ffffff;
+    ---highlighted: #00FFFF;
+    ---font-family-base: 'Spline Sans', sans-serif;
+    ---font-family-title: 'Black Han Sans', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.global-header {
+    position: relative;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:var(---ddd-white);
+}
+
+.main-title {
+    height: 130px;
+    width: 680px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0.8;
+    /*margin-bottom: 75px;*/
+}
+
+.main-title p {
+    position: relative;
+    font-family: var(---font-family-base);
+    margin-bottom: 0;
+    top: 10px;
+    right: 328px;
+}
+
+.main-title h1 {
+    font-size: 100px;
+    font-family: var(---font-family-title);
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.social-shares.header p {
+    font-family: var(---font-family-base);
+    color: var(---ddd-main-blue);
+    margin-bottom: 0;
+}
+
+.global-header.logo {
+    margin-right: 40px;
+}
+
+.global-header.logo img {
+    max-height: 200px;
+    max-width: 180px;
+}
+
+.global-header.social-shares {
+    margin-left: 40px;
+    text-align: center;
+}
+
+
+.youtube-social {
+    position: relative;
+    top:5px;
+}
+
+
+/* Estilos para a barra de navegação */
+/* ----  TOMAR NOTA AQUI ---- */
+.main-nav {
+    width: 100%;
+    background-color: var(---ddd-main-blue);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-nav ul {
+    height: 30px;
+    list-style-type: none;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: var(---ddd-white);
+    text-decoration: none;
+    font-family: var(---font-family-base);
+    font-size: 18px;
+}
+
+.main-nav ul li a:hover {
+    color: var(---highlighted);
+}
+
+.global-content{
+    min-height: 600px;
+    background-color: var(---ddd-white);
+}
+
+
+/*footer features*/
+.global-footer {
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    height: 300px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(---ddd-main-blue);
+    font-family: var(---font-family-base);
+    color: var(---ddd-white);
+}
+
+/* ----  TOMAR NOTA AQUI ---- */
+.global-footer .qrcode-donate,
+.global-footer .contact-us,
+.global-footer .social-shares {
+    width: calc(33.333%);
+    box-sizing: border-box;
+    padding: 20px;
+    display: inline;
+    position: relative;
+}
+
+.qrcode-donate h1 {
+    margin: 0px 0px 5px ;
+    text-align: center;
+}
+
+.qrcode-donate{
+    text-align: center;
+}
+
+#contacts{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.2fr 2.8fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.global-footer .social-shares.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 80px;
+}
+
+.global-footer .social-shares.icons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.global-footer .social-shares.icons a img.instagram-social,
+.global-footer .social-shares.icons a img.facebook-social  {
+    width: 50px;
+    height: auto;
+}
+
+.global-footer .social-shares.icons a img.youtube-social {
+    width: 70px;
+    height: auto;
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+
+/*smaller pc screems*/
+@media (max-width: 1384px) {
+    .main-title h1 {
+        font-size: 70px;
+        font-family: var(---font-family-title);
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+    }
+    .main-title p {
+        position: relative;
+        font-family: var(---font-family-base);
+        margin-bottom: 0;
+        top: 10px;
+        right: 220px;
+    }
+    
+}
+
+/*tablet styles*/
+@media (max-width: 1110px) {
+    .main-title h1 {
+        font-size: 50px;
+    }
+    .main-title p {
+        top: 8px;
+        right: 150px;
+    }
+}
+
+@media (max-width: 931px) {
+    .main-title p {
+        left: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .global-header .logo {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    .global-header .logo img {
+        height: 120px;
+        width: 150px;
+    }
+
+    .main-title h1 {
+        position: relative;
+        top: -50px;
+    }
+    .main-title p {
+        position: relative;
+        top: -50px;
+    }
+
+    .follow-us {
+        display: none;
+    }
+
+    .global-header .social-shares.header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .global-header .social-shares.header a img.instagram-social {
+        width: 40px; 
+        height: auto;
+    }
+
+    .global-header .social-shares.header a img.facebook-social {
+        width: 40px;  
+        height: auto; 
+    }
+
+    .global-header .social-shares.header a img.youtube-social {
+        width: 45px;  
+        height: auto; 
+        position: relative;
+        right: 2px;
+    }
+}
